@@ -13,7 +13,7 @@ try {
             checkout scm
         }
         stage('Checkout Sources'){
-            knimetools.defaultTychoBuild('org.knime.community.template.update')
+            knimetools.defaultMavenBuild(updateSiteProject = 'org.knime.community.template.update', extraMavenArgs = '')
         }
     }
 } catch (ex) {
