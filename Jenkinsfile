@@ -13,7 +13,7 @@ try {
             checkout scm
         }
         stage('Checkout Sources'){
-            knimetools.defaultMavenBuild(updateSiteProject = 'org.knime.community.template.update', extraMavenArgs = '')
+            knimetools.defaultMavenBuild(updateSiteProject = 'org.knime.community.template.update')
         }
     }
 } catch (ex) {
